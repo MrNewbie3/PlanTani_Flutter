@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "815078820046",
+    "project_id": "plantani-backend",
+    "storage_bucket": "plantani-backend.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:815078820046:android:2c379df000d782b4b7e89f",
+        "android_client_info": {
+          "package_name": "com.example.plantani_flutter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "815078820046-82mnjj3348msu5hpgblga25s0rc8thsc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDcIY2qaRdxjAgORyn5Njnn01GPEiAQVzI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "815078820046-82mnjj3348msu5hpgblga25s0rc8thsc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
