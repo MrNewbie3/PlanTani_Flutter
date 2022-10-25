@@ -3,6 +3,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class GoogleSignInProvider extends ChangeNotifier {
+  // MsalMobile msal;
+  // bool isSignedIn = false;
   final googleSignIn = GoogleSignIn();
   GoogleSignInAccount? _user;
   GoogleSignInAccount get user => _user!;
@@ -21,5 +23,19 @@ class GoogleSignInProvider extends ChangeNotifier {
     await FirebaseAuth.instance.signInWithCredential(credential);
 
     notifyListeners();
+    // refreshSignedInStatus() {
+    //   msal.getSignedIn().then((loggedIn) {
+    //     print('refreshing');
+    //     setState(() {
+    //       isSignedIn = loggedIn;
+    //     });
+
+    //     if (isSignedIn) {
+    //       // Your navigation code
+    //       Navigator.of(context).pushReplacement(
+    //           MaterialPageRoute(builder: (context) => NavScreen()));
+    //     }
+    //   });
+    // }
   }
 }

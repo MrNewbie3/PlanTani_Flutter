@@ -24,7 +24,15 @@ class MainPage extends StatelessWidget {
     return Scaffold(
         body: Center(
       child: Column(
-        children: <Widget>[Text("data")],
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Center(
+            child: Text(
+              "You're logged in",
+              style: TextStyle(),
+            ),
+          )
+        ],
       ),
     ));
   }

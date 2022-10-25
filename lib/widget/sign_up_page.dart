@@ -2,6 +2,8 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:plantani_flutter/provider/google_sign_in.dart';
+import 'package:provider/provider.dart';
 
 class Sign_Up extends StatelessWidget {
   const Sign_Up({Key? key}) : super(key: key);
@@ -164,7 +166,13 @@ class Sign_Up extends StatelessWidget {
                                     borderRadius: BorderRadius.circular(10)),
                                 padding: EdgeInsets.fromLTRB(20, 8, 20, 8),
                                 child: TextButton(
-                                  onPressed: () {},
+                                  onPressed: () {
+                                    final provider =
+                                        Provider.of<GoogleSignInProvider>(
+                                            context,
+                                            listen: false);
+                                    provider.googleLogin();
+                                  },
                                   child: Image.asset(
                                     "assets/image/Google_Logo.png",
                                     scale: 3,
