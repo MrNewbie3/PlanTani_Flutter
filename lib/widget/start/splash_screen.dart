@@ -1,13 +1,11 @@
-// ignore_for_file: depend_on_referenced_packages, unused_local_variable, unnecessary_null_comparison
+// ignore_for_file: depend_on_referenced_packages, unused_local_variable, unnecessary_null_comparison, prefer_const_constructors
 
 import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:plantani_flutter/widget/home_page.dart';
-import 'package:plantani_flutter/widget/login_page.dart';
-import 'package:plantani_flutter/widget/wellcome_page.dart';
+import 'package:plantani_flutter/widget/content/page/main_content.dart';
+import 'package:plantani_flutter/widget/start/wellcome_page.dart';
 import 'package:page_transition/page_transition.dart';
-import 'package:provider/provider.dart';
 
 class SplashScreen extends StatelessWidget {
   const SplashScreen({Key? key}) : super(key: key);

@@ -2,9 +2,8 @@
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:plantani_flutter/firebase_options.dart';
 import 'package:plantani_flutter/provider/google_sign_in.dart';
-import 'package:plantani_flutter/widget/splash_screen.dart';
+import 'package:plantani_flutter/widget/start/splash_screen.dart';
 import 'package:provider/provider.dart';
 
 Future main() async {

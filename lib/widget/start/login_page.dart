@@ -3,8 +3,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plantani_flutter/provider/google_sign_in.dart';
-import 'package:plantani_flutter/widget/home_page.dart';
-import 'package:plantani_flutter/widget/sign_up_page.dart';
+import 'package:plantani_flutter/widget/content/page/main_content.dart';
+import 'package:plantani_flutter/widget/start/sign_up_page.dart';
 import 'package:provider/provider.dart';
 
 class LoginPage extends StatelessWidget {
