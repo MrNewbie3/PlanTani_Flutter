@@ -7,23 +7,32 @@ import 'package:plantani_flutter/widget/content/components/main_page_component.d
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
 
-  @override
+  @override 
   Widget build(BuildContext context) {
     return CupertinoTabScaffold(
-      tabBar: CupertinoTabBar(items: [
-        BottomNavigationBarItem(
-          icon: Icon(Icons.home_outlined),
-          label: "Text",
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(CupertinoIcons.arrow_up_square),
-          label: "Text",
-        ),
-        BottomNavigationBarItem(
-          icon: Icon(CupertinoIcons.arrow_up_square),
-          label: "Text",
-        ),
-      ]),
+      tabBar: CupertinoTabBar(
+          activeColor: Color.fromARGB(255, 28, 106, 119),
+          inactiveColor: Color.fromARGB(255, 28, 66, 79),
+          backgroundColor: Colors.white,
+          iconSize: 32,
+          border: Border(top: BorderSide.none),
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(CupertinoIcons.house),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.storefront),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.grass_outlined),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.groups_outlined),
+            ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.person_outline_outlined),
+            ),
+          ]),
       tabBuilder: (BuildContext context, i) {
         return CupertinoTabView(
           builder: (context) {
@@ -34,12 +43,13 @@ class MainPage extends StatelessWidget {
                 return Text("Hello Case 2");
               case 2:
                 return Text("Hello Case 3");
-              default:
+              case 3:
                 return Text("Hello Case 4");
+              case 4:
+                return Text("Hello Case 5");
+              default:
+                return Text("Hello Case 0");
             }
-            // return CupertinoPageScaffold(
-            //   child: ComponentWidget(),
-            // );
           },
         );
       },
