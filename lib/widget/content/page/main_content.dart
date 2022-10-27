@@ -2,12 +2,14 @@
 
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:plantani_flutter/widget/content/components/main_page_component.dart';
+import 'package:plantani_flutter/widget/content/components/coming_soon_components.dart';
+import 'package:plantani_flutter/widget/content/components/home/main_page_component.dart';
+import 'package:plantani_flutter/widget/content/components/profile/profile_page_component.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
 
-  @override 
+  @override
   Widget build(BuildContext context) {
     return CupertinoTabScaffold(
       tabBar: CupertinoTabBar(
@@ -15,7 +17,6 @@ class MainPage extends StatelessWidget {
           inactiveColor: Color.fromARGB(255, 28, 66, 79),
           backgroundColor: Colors.white,
           iconSize: 32,
-          border: Border(top: BorderSide.none),
           items: [
             BottomNavigationBarItem(
               icon: Icon(CupertinoIcons.house),
@@ -40,15 +41,15 @@ class MainPage extends StatelessWidget {
               case 0:
                 return ComponentWidget();
               case 1:
-                return Text("Hello Case 2");
+                return coming_soon();
               case 2:
                 return Text("Hello Case 3");
               case 3:
-                return Text("Hello Case 4");
+                return coming_soon();
               case 4:
-                return Text("Hello Case 5");
+                return profile_component();
               default:
-                return Text("Hello Case 0");
+                return coming_soon();
             }
           },
         );
