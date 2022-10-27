@@ -4,6 +4,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:plantani_flutter/widget/content/components/coming_soon_components.dart';
 import 'package:plantani_flutter/widget/content/components/home/main_page_component.dart';
+import 'package:plantani_flutter/widget/content/components/plant/main_plant.dart';
 import 'package:plantani_flutter/widget/content/components/profile/profile_page_component.dart';
 
 class MainPage extends StatelessWidget {
@@ -43,7 +44,7 @@ class MainPage extends StatelessWidget {
               case 1:
                 return coming_soon();
               case 2:
-                return Text("Hello Case 3");
+                return main_plant();
               case 3:
                 return coming_soon();
               case 4:

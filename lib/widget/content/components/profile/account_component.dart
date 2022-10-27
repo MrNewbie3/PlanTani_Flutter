@@ -1,6 +1,7 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:plantani_flutter/widget/content/components/color_responsive.dart';
 
 class account_component extends StatelessWidget {
@@ -15,7 +16,14 @@ class account_component extends StatelessWidget {
           children: <Widget>[
             Icon(Icons.mail_outline),
             SizedBox(width: deviceWidth(context) * 0.02),
-            Text("echokalimantanselatan@gmail.com")
+            Text(
+              "echokalimantanselatan@gmail.com",
+              style: GoogleFonts.poppins(
+                  textStyle: TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.w600,
+              )),
+            )
           ],
         ),
         SizedBox(height: deviceHeight(context) * 0.02),
@@ -23,7 +31,14 @@ class account_component extends StatelessWidget {
           children: <Widget>[
             Icon(Icons.phone_outlined),
             SizedBox(width: deviceWidth(context) * 0.02),
-            Text("+6285855008901")
+            Text(
+              "+6285855008901",
+              style: GoogleFonts.poppins(
+                  textStyle: TextStyle(
+                fontSize: 10,
+                fontWeight: FontWeight.w600,
+              )),
+            )
           ],
         ),
         SizedBox(height: deviceHeight(context) * 0.02),
@@ -35,7 +50,7 @@ class account_component extends StatelessWidget {
                 decoration: BoxDecoration(
                     borderRadius:
                         BorderRadius.circular(deviceWidth(context) * 0.01),
-                    color: Colors.blue),
+                    color: darkContent),
                 padding: EdgeInsets.fromLTRB(
                   deviceWidth(context) * 0.075,
                   deviceWidth(context) * 0.02,
@@ -44,7 +59,11 @@ class account_component extends StatelessWidget {
                 ),
                 child: Text(
                   "Edit Profil",
-                  style: TextStyle(color: Colors.white),
+                  style: GoogleFonts.poppins(
+                      textStyle: TextStyle(
+                          fontSize: 10,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.white)),
                 ),
               )),
         )
