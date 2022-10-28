@@ -1,4 +1,6 @@
 // ignore_for_file: unnecessary_import, implementation_imports, unused_import, prefer_const_literals_to_create_immutables, duplicate_ignore, sort_child_properties_last, unnecessary_new, prefer_const_constructors
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/foundation/key.dart';
@@ -12,7 +14,8 @@ import 'package:plantani_flutter/widget/content/components/home/profile_componen
 import 'package:plantani_flutter/widget/content/page/main_content.dart';
 
 class ComponentWidget extends StatelessWidget {
-  const ComponentWidget({Key? key}) : super(key: key);
+  ComponentWidget({Key? key}) : super(key: key);
+  final user = FirebaseAuth.instance.currentUser!;
   @override
   Widget build(BuildContext context) {
     return Scaffold(

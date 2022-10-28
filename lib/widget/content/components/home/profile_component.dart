@@ -1,27 +1,27 @@
 // ignore_for_file: sort_child_properties_last
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plantani_flutter/widget/content/components/color_responsive.dart';
 
 class profile_component extends StatelessWidget {
-  const profile_component({Key? key}) : super(key: key);
+  profile_component({Key? key}) : super(key: key);
+  final user = FirebaseAuth.instance.currentUser!;
 
   @override
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
       Row(children: <Widget>[
         Row(children: <Widget>[
-          Container(
+          ClipRRect(
+            borderRadius: BorderRadius.circular(100),
+            child: Image(
+              image: NetworkImage(user.photoURL!),
               width: deviceHeight(context) * 0.1,
               height: deviceHeight(context) * 0.1,
-              child: Image.asset(
-                "assets/image/Google_Logo.png",
-                scale: 2,
-              ),
-              decoration: BoxDecoration(
-                  color: Colors.blue,
-                  borderRadius: BorderRadius.circular(100))),
+            ),
+          ),
           SizedBox(
             width: deviceWidth(context) * 0.05,
           ),
@@ -35,7 +35,7 @@ class profile_component extends StatelessWidget {
                           TextStyle(fontSize: 13, fontWeight: FontWeight.w400)),
                 ),
                 Text(
-                  "Echo Nugroho",
+                  user.displayName!,
                   style: GoogleFonts.poppins(
                       textStyle:
                           TextStyle(fontSize: 22, fontWeight: FontWeight.w600)),

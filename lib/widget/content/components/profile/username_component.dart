@@ -1,12 +1,13 @@
 // ignore_for_file: camel_case_types
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plantani_flutter/widget/content/components/color_responsive.dart';
 
 class username_component extends StatelessWidget {
-  const username_component({Key? key}) : super(key: key);
-
+  username_component({Key? key}) : super(key: key);
+  final user = FirebaseAuth.instance.currentUser!;
   @override
   Widget build(BuildContext context) {
     return Row(children: [

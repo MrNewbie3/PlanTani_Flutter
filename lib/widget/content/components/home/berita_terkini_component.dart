@@ -54,27 +54,5 @@ class berita_terkini_components extends StatelessWidget {
         ],
       ),
     );
-    // Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-    //   Text("Berita Terkini"),
-    //   SizedBox(
-    //     height: deviceHeight(context) * 0.025,
-    //   ),
-    //   Row(children: <Widget>[
-    //     Expanded(
-    //         flex: 2,
-    //         child: Column(children: [
-    //           Image.asset("assets/image/hama_tikus.png"),
-    //           Text("Hama tikus")
-    //         ])),
-    //     SizedBox(width: deviceWidth(context) * 0.04),
-    //     Expanded(
-    //         flex: 2,
-    //         child: )),
-    //
-    //     Expanded(
-    //         flex: 2,
-    //         child: ),
-    //   ])
-    // ]);
   }
 }

@@ -2,6 +2,7 @@
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:plantani_flutter/provider/google_sign_in.dart';
 import 'package:plantani_flutter/widget/start/splash_screen.dart';
 import 'package:provider/provider.dart';
@@ -30,12 +31,14 @@ class MyApp extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
+    final textTheme = Theme.of(context).textTheme;
     return ChangeNotifierProvider(
       create: (context) => GoogleSignInProvider(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
+            textTheme: GoogleFonts.poppinsTextTheme(textTheme),
             primarySwatch: white,
             backgroundColor: Color.fromRGBO(252, 252, 254, 1)),
         home: SplashScreen(),
