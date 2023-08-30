@@ -4,6 +4,7 @@ import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:plantani_flutter/widget/content/page/main_content.dart';
+import 'package:plantani_flutter/widget/start/login_page.dart';
 import 'package:plantani_flutter/widget/start/wellcome_page.dart';
 import 'package:page_transition/page_transition.dart';
 
@@ -23,7 +24,7 @@ class SplashScreen extends StatelessWidget {
           return AnimatedSplashScreen(
             splash: 'assets/image/Plantani.png',
             splashIconSize: 34,
-            nextScreen: const MainPage(),
+            nextScreen: MainPage(),
             splashTransition: SplashTransition.fadeTransition,
             pageTransitionType: PageTransitionType.bottomToTop,
           );
@@ -31,11 +32,19 @@ class SplashScreen extends StatelessWidget {
           return Center(
             child: Text("Something went wrong"),
           );
-        } else {
+        } else if (FirebaseAuth.instance.currentUser == null) {
           return AnimatedSplashScreen(
             splash: 'assets/image/Plantani.png',
             splashIconSize: 34,
             nextScreen: const welcomePage(),
+            splashTransition: SplashTransition.fadeTransition,
+            pageTransitionType: PageTransitionType.bottomToTop,
+          );
+        } else {
+          return AnimatedSplashScreen(
+            splash: 'assets/image/Plantani.png',
+            splashIconSize: 34,
+            nextScreen: MainPage(),
             splashTransition: SplashTransition.fadeTransition,
             pageTransitionType: PageTransitionType.bottomToTop,
           );

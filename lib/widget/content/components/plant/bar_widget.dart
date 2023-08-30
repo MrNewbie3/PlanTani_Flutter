@@ -15,8 +15,8 @@ class BarChartWidgetData extends StatelessWidget {
         show: false,
       ),
       titlesData: FlTitlesData(
-          bottomTitles: BarTitles.bottomTitles(),
-          leftTitles: SideTitles(showTitles: false)),
+          bottomTitles: AxisTitles(sideTitles: BarTitles.bottomTitles()),
+          leftTitles: AxisTitles(sideTitles: SideTitles(showTitles: false))),
       maxY: 12,
       minY: 0,
       groupsSpace: 20,
@@ -24,10 +24,10 @@ class BarChartWidgetData extends StatelessWidget {
       barGroups: dummyData.data
           .map((data) => BarChartGroupData(x: data.id, barRods: [
                 BarChartRodData(
-                    y: data.y,
                     width: 30,
-                    colors: [data.color],
-                    borderRadius: BorderRadius.circular(1))
+                    color: data.color,
+                    borderRadius: BorderRadius.circular(1),
+                    toY: data.y)
               ]))
           .toList()));
 }

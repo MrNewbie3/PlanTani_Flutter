@@ -1,6 +1,10 @@
 // ignore_for_file: camel_case_types, prefer_const_constructors
 
+import 'dart:js_util';
+import 'dart:ui';
+
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plantani_flutter/widget/content/components/color_responsive.dart';
@@ -59,6 +63,7 @@ class account_component extends StatelessWidget {
                   deviceWidth(context) * 0.02,
                   deviceWidth(context) * 0.075,
                   deviceWidth(context) * 0.02,
+                  
                 ),
                 child: Text(
                   "Edit Profil",

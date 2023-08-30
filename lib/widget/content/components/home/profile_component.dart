@@ -8,7 +8,7 @@ import 'package:plantani_flutter/widget/content/components/color_responsive.dart
 class profile_component extends StatelessWidget {
   profile_component({Key? key}) : super(key: key);
   final user = FirebaseAuth.instance.currentUser!;
-
+  
   @override
   Widget build(BuildContext context) {
     return Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [

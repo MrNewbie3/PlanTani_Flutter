@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plantani_flutter/provider/google_sign_in.dart';
 import 'package:plantani_flutter/widget/content/components/color_responsive.dart';
+import 'package:plantani_flutter/widget/start/splash_screen.dart';
 import 'package:plantani_flutter/widget/start/wellcome_page.dart';
 import 'package:provider/provider.dart';
 
@@ -64,8 +65,8 @@ class setting_option_component extends StatelessWidget {
             final provider =
                 Provider.of<GoogleSignInProvider>(context, listen: false);
             provider.logout();
-            Navigator.pushReplacement(context,
-                MaterialPageRoute(builder: (context) => welcomePage()));
+            Navigator.of(context, rootNavigator: true)
+                .push(MaterialPageRoute(builder: (context) => SplashScreen()));
           },
           child: Row(children: <Widget>[
             Icon(Icons.logout, size: 30, color: Colors.red),

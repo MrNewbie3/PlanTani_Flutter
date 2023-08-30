@@ -14,8 +14,7 @@ import 'package:plantani_flutter/widget/content/components/home/profile_componen
 import 'package:plantani_flutter/widget/content/page/main_content.dart';
 
 class ComponentWidget extends StatelessWidget {
-  ComponentWidget({Key? key}) : super(key: key);
-  final user = FirebaseAuth.instance.currentUser!;
+  const ComponentWidget({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

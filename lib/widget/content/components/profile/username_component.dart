@@ -12,21 +12,17 @@ class username_component extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(children: [
       Row(children: [
-        Container(
-            width: deviceHeight(context) * 0.1,
-            height: deviceHeight(context) * 0.1,
-            decoration: BoxDecoration(
-                color: Colors.blue, borderRadius: BorderRadius.circular(100)),
-            child: Image.asset(
-              "assets/image/Google_Logo.png",
-              scale: 2,
+        ClipRRect(
+            borderRadius: BorderRadius.circular(100),
+            child: Image(
+              image: NetworkImage(user.photoURL!, scale: 1.5),
             )),
         SizedBox(
           width: deviceWidth(context) * 0.05,
         ),
         Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(
-            "Echo Nugroho",
+            user.displayName!,
             style: GoogleFonts.poppins(
                 textStyle:
                     TextStyle(fontSize: 22, fontWeight: FontWeight.w600)),

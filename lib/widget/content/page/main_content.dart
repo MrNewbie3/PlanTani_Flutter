@@ -1,5 +1,7 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors_in_immutables, prefer_const_constructors, prefer_const_literals_to_create_immutables, unnecessary_new, sort_child_properties_last, unused_import, unnecessary_import
 
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:plantani_flutter/widget/content/components/coming_soon_components.dart';
@@ -8,8 +10,8 @@ import 'package:plantani_flutter/widget/content/components/plant/main_plant.dart
 import 'package:plantani_flutter/widget/content/components/profile/profile_page_component.dart';
 
 class MainPage extends StatelessWidget {
-  const MainPage({Key? key}) : super(key: key);
-
+  MainPage({Key? key}) : super(key: key);
+  final user = FirebaseAuth.instance.currentUser;
   @override
   Widget build(BuildContext context) {
     return CupertinoTabScaffold(

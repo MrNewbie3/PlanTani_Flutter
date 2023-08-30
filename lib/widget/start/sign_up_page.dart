@@ -1,8 +1,10 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, camel_case_types
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:plantani_flutter/provider/google_sign_in.dart';
+import 'package:plantani_flutter/widget/content/page/main_content.dart';
 import 'package:provider/provider.dart';
 
 class Sign_Up extends StatelessWidget {
@@ -135,7 +137,14 @@ class Sign_Up extends StatelessWidget {
                               color: Color.fromRGBO(28, 66, 79, 1),
                               borderRadius: BorderRadius.circular(15)),
                           child: TextButton(
-                            onPressed: () {},
+                            onPressed: () {
+                              CupertinoAlertDialog(
+                                title: Text("Only can Login using google"),
+                                actions: [
+                                  CupertinoDialogAction(child: Text("Ok"))
+                                ],
+                              );
+                            },
                             child: Text(
                               "Daftar",
                               style: GoogleFonts.poppins(
@@ -172,6 +181,10 @@ class Sign_Up extends StatelessWidget {
                                             context,
                                             listen: false);
                                     provider.googleLogin();
+                                    Navigator.push(
+                                        context,
+                                        MaterialPageRoute(
+                                            builder: (context) => MainPage()));
                                   },
                                   child: Image.asset(
                                     "assets/image/Google_Logo.png",
